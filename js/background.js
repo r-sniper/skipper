@@ -1,5 +1,5 @@
-let color = '#3aa757';
+// let color = '#3aa757';
 
-chrome.runtime.onInstalled.addListener(() => {
+/* chrome.runtime.onInstalled.addListener(() => {
     console.log('Default background color set to %cgreen', `color: ${color}`);
-});
+}); */

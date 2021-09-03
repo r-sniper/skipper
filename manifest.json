@@ -3,9 +3,6 @@
   "description": "Skip Movie/Series video scenes for popular streaming services like Netflix!",
   "version": "0.0.1",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "js/background.js"
-  },
   "action": {
     "default_popup": "html/index.html"
   }

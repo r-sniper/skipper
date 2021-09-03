@@ -30,4 +30,5 @@ We would be more than happy to merge any pull requests
 Help create more skipper metadata files.
 
 
-[comment]: <> (TODO file format)
+## Future Scope
+Skipping scenes using AI/ML/DL.
