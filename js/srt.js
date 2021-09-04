@@ -14,7 +14,10 @@ class Srt {
         for (var i = 0; i < lines.length; i++) {
             var line = lines[i];
             var origin = line.split('\n');
-            if (origin.length >= 3) {
+            if (origin.length < 2) {
+                //TODO: throw exception
+            }
+            else {
                 // counter
                 var counter = origin[0];
                 // time
@@ -25,8 +28,10 @@ class Srt {
                 var endDate = this.stringToDate(endText);
                 // subtitle 
                 var subtitle = '';
-                for (var j = 2; j < origin.length; j++) {
-                    subtitle = subtitle + origin[j] + '\n';
+                if (origin.length >= 3) {
+                    for (var j = 2; j < origin.length; j++) {
+                        subtitle = subtitle + origin[j] + '\n';
+                    }
                 }
                 // push to list
                 this.lines.push({

@@ -12,4 +12,5 @@
 * [ ] When to Skip videos - 1d
 * [ ] Interface to skip - 1d
 * [ ] Beautify - 1d
+* [ ] icon - 0.5d
 * [ ] Release on chrome - 4h
