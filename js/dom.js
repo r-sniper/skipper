@@ -1,6 +1,7 @@
 var skippingEnabled = false;
 var currentSkipIndex = 0;
 var lines = [];
+var nextLine;
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     console.log(request);
@@ -8,6 +9,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         // console.log("message received");
         console.log(request.lines);
         lines = request.lines;
+        nextLine = getNextSkippingTimestamp();
         skippingEnabled = true;
         sendResponse({ dom: "received" });
     }
@@ -16,7 +18,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 window.onload = () => {
     let videoPlayer = document.getElementsByClassName('video-stream html5-main-video')[0];
     let skipped = false;
-    let nextLine = getNextSkippingTimestamp();
     videoPlayer.addEventListener("timeupdate", () => {
         let currentTime = videoPlayer.currentTime;
         if (skippingEnabled) {
