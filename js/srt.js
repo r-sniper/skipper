@@ -110,7 +110,7 @@ class Srt {
         var minute = string.substring(firstColonIndex + 1, secondColonIndex);
         var second = string.substring(secondColonIndex + 1, commaIndex);
         var msecond = string.substring(commaIndex + 1);
-        return new Date(1970, 1, 1, hour, minute, second, msecond);
+        return new Date(1970, 0, 1, hour, minute, second, msecond);
     }
     dateToObject(date) {
         return {
@@ -119,7 +119,8 @@ class Srt {
             hours: date.getHours(),
             minutes: date.getMinutes(),
             seconds: date.getSeconds(),
-            milliseconds: date.getMilliseconds()
+            milliseconds: date.getMilliseconds(),
+            timeInSeconds: Date.UTC(1970, 0, 1, date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds())/1000
         };
     }
     nthChar(string, character, n) {

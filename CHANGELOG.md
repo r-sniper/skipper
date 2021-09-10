@@ -6,11 +6,11 @@
   * [X] Deployable on chrome - 3h  
   * [X] Read skipper metadata file - 2h
   * [X] File format - 1d  
-  * [ ] parse file - 0.5d
-* [ ] Customize parser - 0.5d
-* [ ] How to skip videos - 1d
-* [ ] When to Skip videos - 1d
-* [ ] Interface to skip - 1d
-* [ ] Beautify - 1d
-* [ ] icon - 0.5d
+  * [X] parse file - 0.5d
+  * [X] Customize parser - 0.5d
+  * [ ] How to skip videos - 1d
+  * [ ] When to Skip videos - 1d
+  * [ ] Interface to skip - 1d
+  * [ ] Beautify - 1d
+  * [ ] icon - 0.5d
 * [ ] Release on chrome - 4h

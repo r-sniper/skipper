@@ -5,5 +5,12 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "html/index.html"
-  }
+  },
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/watch?v=*"],
+    "js": ["js/dom.js"]
+  }],
+  "permissions" : [
+    "activeTab"
+  ]
 }
